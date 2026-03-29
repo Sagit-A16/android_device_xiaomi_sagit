@@ -45,10 +45,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.touch-service.xiaomi
 
-# Sensors
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
-
 $(call soong_config_set,XIAOMI_TOUCH,KEY_DISABLER_CONTROL_PATH,/proc/touchpanel/capacitive_keys_enable)
 $(call soong_config_set,XIAOMI_TOUCH,KEY_SWAPPER_CONTROL_PATH,/proc/touchpanel/reversed_keys_enable)
 

@@ -24,6 +24,8 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/etc/sensors/hals.conf': blob_fixup()
+        .regex_replace('sensors.elliptic.so\n', ''),
     'vendor/lib64/libgf_hal.so': blob_fixup()
         .remove_needed('libpowermanager.so'),
 }  # fmt: skip
